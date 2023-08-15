@@ -1,5 +1,5 @@
 
-const slotIndex = ['0','1'/*,'2','3','4','5'*/]
+const slotIndex = ['0','1','2'/*,'3','4','5'*/]
 const slots = document.querySelectorAll('div');
 const message = document.querySelector('p');
 const spinBtn = document.querySelector('button');
@@ -18,20 +18,19 @@ function initialize(){
 }
 
 function spin() {
-    slotOutput = slots.innerHTML;
-    for(i = 0; i < 10; i++){
-       slotOutput = slotIndex[Math.floor(Math.random * slotIndex.length + 1)];
-       console.log(slotOutput)
-    }
+    slot1.innerHTML = slotIndex[Math.floor(Math.random() * slotIndex.length)]
+    slot2.innerHTML = slotIndex[Math.floor(Math.random() * slotIndex.length)]
+    slot3.innerHTML = slotIndex[Math.floor(Math.random() * slotIndex.length)]
     winner = getWinner();
 }
 
 function getWinner(){
     if(slot1.innerHTML === slot2.innerHTML){
         if(slot2.innerHTML === slot3.innerHTML){
-            return winner;
+            winner = true;
         }
     }
+    return winner;
     console.log(winner)
     render();
 }
