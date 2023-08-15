@@ -1,6 +1,5 @@
 
-const slotIndex = ['0','1','2'/*,'3','4','5'*/]
-const slots = document.querySelectorAll('div');
+const slotIndex = ['0','1','2']
 const message = document.querySelector('p');
 const spinBtn = document.querySelector('button');
 
